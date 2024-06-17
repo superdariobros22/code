@@ -7,7 +7,7 @@ int main ( ) {
     vector<char> vec;
 
     for (int i=0 ; i<3 ; i++) {
-        vector<int> 
+        
     }
 
 
