@@ -6,12 +6,11 @@ int main ( ) {
     cin >> a;
     vector<char> vec;
 
-    for (int i=0 ; i<3 ; i++) {
+    for (int i=0 ; i<a ; i++) {
         string x;
         int cero=0, uno=0, unodecero=0;
         bool antcero=false;
         cin >> x;
-        
         for (int j=0 ; j<x.length() ; j++) {
             if (x[j]=='0') {
                 cero++;
@@ -29,8 +28,8 @@ int main ( ) {
             unodecero++;
         }
 
-        double girar = uno/(cero+uno);
-        double nogirar = unodecero/cero;
+        float girar = uno*100/(cero+uno);
+        float nogirar = unodecero*100/cero;
 
         if (girar==nogirar) {
             vec.push_back('d');

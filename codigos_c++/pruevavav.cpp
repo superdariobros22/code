@@ -2,7 +2,6 @@
 using namespace std;
  
 int main() {
-  string a;
-  cin >> a;
-  cout << a[a.length()-1];
+  float a=5/3*100;
+  cout << a;
 }
