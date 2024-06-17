@@ -2,7 +2,7 @@
 using namespace std;
  
 int main() {
-  int a;
+  string a;
   cin >> a;
-  cout << a;
+  cout << a[a.length()-1];
 }
