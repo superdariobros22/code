@@ -2,7 +2,14 @@
 using namespace std;
  
 int main() {
-  int i=2;
-  int des=pow(2, (i+1));
-  cout << des;
+
+  float a, b;
+
+  cout << "Introduzca el precio inicial: ";
+  cin >> a;
+  cout << endl << "Introduzca el descuento a realizar (%) ";
+  cin >> b;
+  cout << endl << "El descuento es: " << a*(b/100) << endl << "El precio final es: " << a*((100-b)/100);
+
 }
+
