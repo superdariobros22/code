@@ -2,8 +2,7 @@
 using namespace std;
  
 int main() {
-  string s = "dario";
-  for (int i=0 ; i<s.size() ; i++) {
-    cout << s[i] << endl;
-  }
+  int i=2;
+  int des=pow(2, (i+1));
+  cout << des;
 }
