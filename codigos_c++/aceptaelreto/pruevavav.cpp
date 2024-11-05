@@ -14,6 +14,6 @@ int main() {
   cout << "Introduce la altura: ";
   cin >> altura;
 
-  cout << superficie(base, altura);
+  cout << superficie(altura, base);
 
 }
