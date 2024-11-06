@@ -8,10 +8,10 @@ int main() {
 
     for (int i=0 ; i<a ; i++) {
 
+        int c=0;
+
         string x;
         cin >> x;
-
-        int c=0;
 
         for (int j=0 ; j<x.length() ; j+=2) {
             if (x[j]==x[j+1]) {
