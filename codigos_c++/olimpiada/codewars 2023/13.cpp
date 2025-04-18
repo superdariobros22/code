@@ -2,78 +2,124 @@
 using namespace std;
 
 string numeroaletra(int n) {
-    int sol=0;
+    string sol="";
     for (int i=10 ; i>=0 ; i--) {
         if (n/pow(26,i)!=0) {
             switch(n/pow(26,i)) {
-                case '1'
+                case 1: sol.push_back('A');
+                break;
+                case 2: sol.push_back('A');
+                break;
+                case 3: sol.push_back('A');
+                break;
+                case 4: sol.push_back('A');
+                break;
+                case 5: sol.push_back('A');
+                break;
+                case 6: sol.push_back('A');
+                break;
+                case 7: sol.push_back('A');
+                break;
+                case 8: sol.push_back('A');
+                break;
+                case 9: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
+                case 1: sol.push_back('A');
+                break;
             }
             n=n%pow(26,i);
         }
     }
-    string s=to_string(sol);
-    for (int i=0 ; i<s.length() ; i++) {
-        switch(n/pow(26,i)) {
-            case '1'
-        }
-    }
+    
 }
 
 int letraanumero(string s) {
     int n=0;
     for (size_t i=s.length()-1 ; i>=0 ; i--) {
         switch(s[i]) {
-            case 'A': n+=1*pow(26,i);
+            case 'A': n+=1*pow(26,s.length()-1-i);
             break;
-            case 'B': n+=2*pow(26,i);
+            case 'B': n+=2*pow(26,s.length()-1-i);
             break;
-            case 'C': n+=3*pow(26,i);
+            case 'C': n+=3*pow(26,s.length()-1-i);
             break;
-            case 'D': n+=4*pow(26,i);
+            case 'D': n+=4*pow(26,s.length()-1-i);
             break;
-            case 'E': n+=5*pow(26,i);
+            case 'E': n+=5*pow(26,s.length()-1-i);
             break;
-            case 'F': n+=6*pow(26,i);
+            case 'F': n+=6*pow(26,s.length()-1-i);
             break;
-            case 'G': n+=7*pow(26,i);
+            case 'G': n+=7*pow(26,s.length()-1-i);
             break;
-            case 'H': n+=8*pow(26,i);
+            case 'H': n+=8*pow(26,s.length()-1-i);
             break;
-            case 'I': n+=9*pow(26,i);
+            case 'I': n+=9*pow(26,s.length()-1-i);
             break;
-            case 'J': n+=10*pow(26,i);
+            case 'J': n+=10*pow(26,s.length()-1-i);
             break;
-            case 'K': n+=11*pow(26,i);
+            case 'K': n+=11*pow(26,s.length()-1-i);
             break;
-            case 'L': n+=12*pow(26,i);
+            case 'L': n+=12*pow(26,s.length()-1-i);
             break;
-            case 'M': n+=13*pow(26,i);
+            case 'M': n+=13*pow(26,s.length()-1-i);
             break;
-            case 'N': n+=14*pow(26,i);
+            case 'N': n+=14*pow(26,s.length()-1-i);
             break;
-            case 'O': n+=15*pow(26,i);
+            case 'O': n+=15*pow(26,s.length()-1-i);
             break;
-            case 'P': n+=16*pow(26,i);
+            case 'P': n+=16*pow(26,s.length()-1-i);
             break;
-            case 'Q': n+=17*pow(26,i);
+            case 'Q': n+=17*pow(26,s.length()-1-i);
             break;
-            case 'R': n+=18*pow(26,i);
+            case 'R': n+=18*pow(26,s.length()-1-i);
             break;
-            case 'S': n+=19*pow(26,i);
+            case 'S': n+=19*pow(26,s.length()-1-i);
             break;
-            case 'T': n+=20*pow(26,i);
+            case 'T': n+=20*pow(26,s.length()-1-i);
             break;
-            case 'U': n+=21*pow(26,i);
+            case 'U': n+=21*pow(26,s.length()-1-i);
             break;
-            case 'V': n+=22*pow(26,i);
+            case 'V': n+=22*pow(26,s.length()-1-i);
             break;
-            case 'W': n+=23*pow(26,i);
+            case 'W': n+=23*pow(26,s.length()-1-i);
             break;
-            case 'X': n+=24*pow(26,i);
+            case 'X': n+=24*pow(26,s.length()-1-i);
             break;
-            case 'Y': n+=25*pow(26,i);
+            case 'Y': n+=25*pow(26,s.length()-1-i);
             break;
-            case 'Z': n+=26*pow(26,i);
+            case 'Z': n+=26*pow(26,s.length()-1-i);
             break;
         }
     }

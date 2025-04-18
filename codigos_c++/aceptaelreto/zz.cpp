@@ -1,19 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+int fun (int n) {
+    if (n%2==0) {
+        n/=2;
+        return fun(n);
+    } else {
+        return n;
+    }
+    
+}
+
 int main() {
-
-    string frase;
-    vector<char> vec;
-
-    cout << "Introduzca la frase: ";
-    cin >> frase;
-
-    for (int i=0 ; i<frase.length(); i++) {
-        vec.push_back(frase[i]);
-    }
-
-    for (int j=frase.length()-1 ; j>=0 ; j--) {
-        cout << vec[j];
-    }
+    int n;
+    cin >> n;
+    n=fun(n);
+    cout << n;
 }    
