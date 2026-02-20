@@ -1,4 +1,5 @@
 #include "bits/stdc++.h"
+
 using namespace std;
 
 #define all(a) a.begin(), a.end()
@@ -12,33 +13,22 @@ using namespace std;
 
 const ll MOD = 1e9 + 7;
 const ll MAX = 1e9;
+
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-
-    vector<ll int> vv;
-    ll int tt, n, x;
+    
+    int tt, r, cx, cy, px, py;
+    vector<string> v;
     cin >> tt;
     for (int i=0 ; i<tt ; i++) {
-        ll int k=0;
-        cin >> n;
-        vector<ll int> v;
-        for (int j=0 ; j<n ; j++) {
-            cin >> x;
-            v.push_back(x);
-        }
-        sort(v.begin(), v.end());
-        for (int j=1 ; j<n ; j++) {
-            k+=v[j]-v[j-1]-1;
-        }
-        k+=v[0];
-        vv.pb(k);
+        cin >> r >> cx >> cy >> px >> py;
+        if (sqrt(pow(px-cx,2)+pow(py-cy,2))>r) v.pb("NO");
+        else v.pb("SI");
     }
     for (int i=0 ; i<tt ; i++) {
-        cout << vv[i] << endl;
+        cout << v[i] << endl;
     }
+    
+    return 0;
 }
-
-
-
-
