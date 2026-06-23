@@ -18,14 +18,22 @@ int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    string s;
-    int n;
-    cin >> s >> n;
-    cout << "Vienen a pasear: ";
-    if (s[0]=='S'&&n>=20) cout << "Adrian ";
-    if (s[0]=='S'||n>15) cout << "Barbara ";
-    if (s[0]=='S'||s[0]=='N') cout << "Carmen ";
-    if (s[0]!='T') cout << "Dario";
+    int n, w, x, t=0;
+    vector<int> v;
+    cin >> n >> w;
+    for (int i=0 ; i<n ; i++) {
+        cin >> x;
+        v.push_back(x);
+    }
+    sort(all(v));
+    while(v.size()>1) {
+        t++;
+        if (w-v[v.size()-1]>=v[0]) v.erase(v.begin());
+        v.pop_back();
+    }
+    if (v.size()>0) t++;
+    cout << t;
+
     
     return 0;
 }

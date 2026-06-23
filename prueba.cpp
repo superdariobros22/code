@@ -12,30 +12,18 @@ using namespace std;
 
 const ll MOD = 1e9 + 7;
 const ll MAX = 1e9;
+
+
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    vector<ll int> vv;
-    ll int tt, n, x;
-    cin >> tt;
-    for (int i=0 ; i<tt ; i++) {
-        ll int k=0;
-        cin >> n;
-        vector<ll int> v;
-        for (int j=0 ; j<n ; j++) {
-            cin >> x;
-            v.push_back(x);
-        }
-        sort(v.begin(), v.end());
-        for (int j=1 ; j<n ; j++) {
-            k+=v[j]-v[j-1]-1;
-        }
-        k+=v[0];
-        vv.pb(k);
-    }
-    for (int i=0 ; i<tt ; i++) {
-        cout << vv[i] << endl;
+    int i1=1, i2=1, k=0;
+    for (int i=0 ; i<1000 ; i++) {
+        cout << (float)i2/i1 << endl;
+        k=i2;
+        i2+=i1;
+        i1=k;
     }
 }
 

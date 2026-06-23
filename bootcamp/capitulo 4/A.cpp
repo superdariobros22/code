@@ -18,14 +18,19 @@ int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    string s;
     int n;
-    cin >> s >> n;
-    cout << "Vienen a pasear: ";
-    if (s[0]=='S'&&n>=20) cout << "Adrian ";
-    if (s[0]=='S'||n>15) cout << "Barbara ";
-    if (s[0]=='S'||s[0]=='N') cout << "Carmen ";
-    if (s[0]!='T') cout << "Dario";
+    cin >> n;
+    cin.ignore();
+    for (int i=0 ; i<n ; i++) {
+        string s;
+        int c=0, d=0;
+        getline(cin, s);
+        for (size_t j=0 ; j<s.length() ; j++) {
+            if (s[j]=='a'||s[j]=='e'||s[j]=='i'||s[j]=='o'||s[j]=='u') d++;
+            else if (s[j]==' ') c++;
+        }
+        cout << d << ' ' << s.length()-c << endl;
+    }
     
     return 0;
 }

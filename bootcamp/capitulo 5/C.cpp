@@ -1,5 +1,4 @@
 #include "bits/stdc++.h"
-
 using namespace std;
 
 #define all(a) a.begin(), a.end()
@@ -13,19 +12,22 @@ using namespace std;
 
 const ll MOD = 1e9 + 7;
 const ll MAX = 1e9;
-
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
+
     
-    string s;
-    int n;
-    cin >> s >> n;
-    cout << "Vienen a pasear: ";
-    if (s[0]=='S'&&n>=20) cout << "Adrian ";
-    if (s[0]=='S'||n>15) cout << "Barbara ";
-    if (s[0]=='S'||s[0]=='N') cout << "Carmen ";
-    if (s[0]!='T') cout << "Dario";
     
-    return 0;
+    vector<string> v (5);
+    for (int i=0 ; i<5 ; i++) {
+        cin >> v[i];
+    }
+    sort(all(v));
+    for (int i=0 ; i<5 ; i++) {
+        cout << v[i] << endl;
+    }
 }
+
+
+
+

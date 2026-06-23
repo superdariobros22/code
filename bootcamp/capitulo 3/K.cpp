@@ -19,13 +19,12 @@ int main(){
     cin.tie(NULL);
     
     string s;
-    int n;
-    cin >> s >> n;
-    cout << "Vienen a pasear: ";
-    if (s[0]=='S'&&n>=20) cout << "Adrian ";
-    if (s[0]=='S'||n>15) cout << "Barbara ";
-    if (s[0]=='S'||s[0]=='N') cout << "Carmen ";
-    if (s[0]!='T') cout << "Dario";
-    
+    vector<string> ss;
+    while(getline(cin, s)) {
+        ss.pb(s);
+        s="";
+    }
+    cout << ss[ss.size()-1];
+
     return 0;
 }

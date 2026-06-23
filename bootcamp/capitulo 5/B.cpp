@@ -18,14 +18,19 @@ int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    string s;
-    int n;
-    cin >> s >> n;
-    cout << "Vienen a pasear: ";
-    if (s[0]=='S'&&n>=20) cout << "Adrian ";
-    if (s[0]=='S'||n>15) cout << "Barbara ";
-    if (s[0]=='S'||s[0]=='N') cout << "Carmen ";
-    if (s[0]!='T') cout << "Dario";
+    int n, q, x;
+    cin >> n;
+    vector<int> v (n);
+    for (int i=0 ; i<n ; i++) {
+        cin >> v[i];
+    }
+    cin >> q;
+    for (int i=0 ; i<q ; i++) {
+        cin >> x;
+        if (find(all(v),x)!=v.end()) cout << "YES";
+        else cout << "NO";
+        cout << endl;
+    }
     
     return 0;
 }

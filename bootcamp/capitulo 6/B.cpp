@@ -14,18 +14,21 @@ using namespace std;
 const ll MOD = 1e9 + 7;
 const ll MAX = 1e9;
 
+int arepa(int n) {
+    if (n>=3) {
+        return arepa(n-1) + arepa(n-2);
+    } else {
+        return 1;
+    }
+}
+
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    string s;
     int n;
-    cin >> s >> n;
-    cout << "Vienen a pasear: ";
-    if (s[0]=='S'&&n>=20) cout << "Adrian ";
-    if (s[0]=='S'||n>15) cout << "Barbara ";
-    if (s[0]=='S'||s[0]=='N') cout << "Carmen ";
-    if (s[0]!='T') cout << "Dario";
+    cin >> n;
+    cout << arepa(n);
     
     return 0;
 }

@@ -14,18 +14,27 @@ using namespace std;
 const ll MOD = 1e9 + 7;
 const ll MAX = 1e9;
 
+void flecha(int n, int k) {
+    for (int i=0 ; i<k ; i++) {
+        cout << '#';
+    }
+    cout << endl;
+    if (k<n) {
+        flecha(n,k+1);
+        for (int i=0 ; i<k ; i++) {
+            cout << '#';
+        }
+        cout << endl;
+    }
+}
+
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    string s;
     int n;
-    cin >> s >> n;
-    cout << "Vienen a pasear: ";
-    if (s[0]=='S'&&n>=20) cout << "Adrian ";
-    if (s[0]=='S'||n>15) cout << "Barbara ";
-    if (s[0]=='S'||s[0]=='N') cout << "Carmen ";
-    if (s[0]!='T') cout << "Dario";
+    cin >> n;
+    flecha(n, 1);
     
     return 0;
 }
