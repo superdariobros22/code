@@ -14,19 +14,25 @@ using namespace std;
 const ll MOD = 1e9 + 7;
 const ll MAX = 1e9;
 
-int pasos(int n) {
-    if (n==0) return 1;
-    if (n==1) return pasos(0);
-    else return pasos(n-1)+pasos(n-2);
-}
-
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
+    
+    int l;
+    vector<int> v;
+    while(cin >> l) {
+        int t=0, i=0;
+        while(l>=1) {
+            t+=(4*l*pow(4,i));
+            i++;
+            l/=2;
+        }
+        v.pb(t);
+    }
+    for (size_t i=0 ; i<v.size() ; i++) {
+        cout << v[i] << endl;
+    }
 
-    int n;
-    cin >> n;
-    cout << pasos(n);
     
     return 0;
 }

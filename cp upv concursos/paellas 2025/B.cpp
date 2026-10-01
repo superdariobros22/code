@@ -14,19 +14,23 @@ using namespace std;
 const ll MOD = 1e9 + 7;
 const ll MAX = 1e9;
 
-int pasos(int n) {
-    if (n==0) return 1;
-    if (n==1) return pasos(0);
-    else return pasos(n-1)+pasos(n-2);
-}
-
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
     int n;
-    cin >> n;
-    cout << pasos(n);
+    
+    while(cin >> n) {
+        double a, r, h, l, pi;
+        a=n*280;
+        pi=acos(-1);
+        r=sqrt(a/pi);
+        l=2*r*cos(pi/6);
+        h=r+r*sin(pi/6);
+        cout << setprecision(5) << fixed << l*h/2 << endl;
+        cout << setprecision(5) << fixed <<  3*l << endl << endl;
+
+    }
     
     return 0;
 }
