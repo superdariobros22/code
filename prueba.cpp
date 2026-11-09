@@ -17,12 +17,9 @@ const ll MAX = 1e9;
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    ll n=3;
-    for (int i=2 ; i<=61 ; i++) {
-        ll m=n;
-        n=2*m+2+i;
-        cout << log2(n) << endl;
-    }
+    
+    char c='v';
+    cout << char(int(c)-32);
     
     return 0;
 }
