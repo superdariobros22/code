@@ -24,10 +24,20 @@ int main(){
         string x;
         cin >> x;
         char anterior=x[0];
-        int veces=0;
+        int veces=1;
         for (int i=1 ; i<x.length() ; i++) {
-            
+            if (x[i]==anterior) {
+                veces++;
+            } else {
+                if (veces!=1) cout << veces;
+                cout << anterior;
+                veces=1;
+                anterior=x[i];
+
+            }
         }
+        if (veces!=1) cout << veces;
+        cout << anterior << endl;
     }
     
     return 0;
