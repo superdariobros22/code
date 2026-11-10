@@ -15,21 +15,17 @@ const ll MOD = 1e9 + 7;
 const ll MAX = 1e9;
 
 void perm(string x, string y, int n) {
-    for (int i=0 ; i<n ; i++) {
-        if (y[i]!='0') {
-            cout << x[i];
-            y[i]='0';
-            bool b=true;
-            for (int j=0 ; j<n ; j++) {
-                if (y[j]!='0') {
-                    perm(x, y, n);
-                    b=false;
-                }
-                if (b==true) cout << endl;
+   for (int i=0 ; i<x.length() ; i++) {
+    size_t tt=y.find(x[i]);
+    if (tt==string::npos) {
+            y[n-1]=x[i];
+            if (n==x.length()) {
+                cout << y << endl;
+            } else {
+                perm(x, y, n+1);
             }
-            
         }
-    }
+   }
 }
 
 int main(){
@@ -38,9 +34,11 @@ int main(){
     
     string x, y;
     cin >> x;
-    int n=x.length();
     y=x;
-    perm(x, y, n);
+    for (int i=0 ; i<x.length() ; i++) {
+        y[i]=' ';
+    }
+    perm(x, y, 1);
     
     return 0;
 }
